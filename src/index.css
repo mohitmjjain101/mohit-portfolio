@@ -11,3 +11,137 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.main-logo{
+  flex: 4;
+  padding-left: 50px;
+  font-size: 20px;
+}
+.hamburger-btn{
+ display: none;
+}
+.nav-main{
+  flex: 8;
+  width: 100%;
+}
+.nav-bar{
+  padding: 10px 20px 0px 20px;
+}
+
+.main{
+  /* flex : auto */
+
+  
+}
+.home{
+  margin-top : 100px;
+  margin-bottom : 100px;
+}
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box .container{
+  border : 1px solid black;
+  width: 700px;
+  height: 500px;
+  z-index: 2;
+  border-radius: 3px;
+  background-color: blanchedalmond;
+}
+.box .container .first-container{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+  z-index: 2;
+}
+.home-img{
+  width: 350px;
+  height: 450px;
+}
+@media only screen and (max-width: 768px) {
+  .nav-main{
+   display: none;
+  }
+  .nav-bar{
+    display: none;
+  }
+  .hamburger-btn{
+    flex: 0.17;
+    display: block;
+    font-size: 1.3rem;
+    bottom: 0;
+    height: 35px;
+    right: 30px;
+    color: whitesmoke;
+    /* height: 80px; */
+    align-items: stretch;
+  }
+  .hamburger-bar{
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    margin-top: 4px;
+    margin-bottom: 7px;
+  }
+  .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  .addTransiton{
+    transform: translateX(170px);
+    transition: transform 0.5s ease-in-out;
+  }
+  .removeTransition{
+    transform: translateX(20px);
+    transition: transform 0.5s ease-in-out;
+  }
+  .box .container{
+    border : 1px solid black;
+    width: 500px;
+    height: 1000px;
+    z-index: 2;
+    border-radius: 3px;
+    background-color: blanchedalmond;
+  }
+  .box .container .first-container{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    z-index: 2;
+  }
+  .home-img{
+    width: 400px;
+    height: 500px;
+  }
+}
